@@ -3,8 +3,6 @@ package com.danielme.android.butterknife;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -12,25 +10,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnItemClick;
-import butterknife.OnItemSelected;
 
 
 public class MainActivity extends Activity {
 
-    @Bind(R.id.editText)
+    @BindView(R.id.editText)
     EditText editText;
 
-    @Bind(R.id.textView)
+    @BindView(R.id.textView)
     TextView textView;
 
-    @Bind(R.id.listView)
+    @BindView(R.id.listView)
     ListView listView;
 
     private List<String> objects;
@@ -49,7 +45,7 @@ public class MainActivity extends Activity {
     }
 
     @OnClick(R.id.button)
-    public void copy(Button button) {
+    public void copy(Button view) {
         textView.setText(editText.getText());
     }
 

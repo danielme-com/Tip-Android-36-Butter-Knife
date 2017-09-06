@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CustomAdapter extends ArrayAdapter<String> {
@@ -39,9 +39,9 @@ public class CustomAdapter extends ArrayAdapter<String> {
     }
 
     static class ViewHolder {
-        @Bind(R.id.title)
+        @BindView(R.id.title)
         TextView title;
-        @Bind(R.id.subtitle)
+        @BindView(R.id.subtitle)
         TextView subtitle;
 
         public ViewHolder(View view) {
